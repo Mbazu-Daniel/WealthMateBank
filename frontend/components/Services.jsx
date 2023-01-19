@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../style'
+import styles from '../constants/style'
 import Feature from './Feature'
 import service from "./services.module.css"
 

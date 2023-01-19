@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { navLinks } from "../constants/index";
-import { close, logo, grandida, menu, bank } from "../../public/assets";
+import { close, logo, grandida, menu, bank } from "../public/assets";
 
 const Header = ({props}) => {
 

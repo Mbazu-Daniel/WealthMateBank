@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import {  arrowUp } from "../../public/assets";
-import styles from "../style";
+import {  arrowUp } from "../public/assets";
+import styles from "../constants/style";
 
 const GetStarted = () => (
 

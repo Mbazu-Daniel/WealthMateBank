@@ -1,6 +1,6 @@
 import Image from "next/image";
-import {  icon } from "../../public/assets";
-import styles, {layout} from "../style";
+import {  icon } from "../public/assets";
+import styles, {layout} from "../constants/style";
 import { features } from "../constants";
 import Button from "./Button";
 

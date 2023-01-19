@@ -1,12 +1,12 @@
 import { BigNumber, Contract, ethers, providers, utils } from "ethers";
 import React, { useEffect, useRef, useState } from "react";
 import Web3Modal from "web3modal";
-import styles from "../../style";
-import Header from "../../components/Header";
-import ConnectButton from "../../Bank-Component/ConnectButton";
-import Footer from "../../components/Footer";
-import Balances from "../../Bank-Component/Balances";
-import { BANK_CONTRACT_ADDRESS , BANK_ABI} from "../../bank-constant/constants/index.js";
+import styles from "../../../constants/style";
+import Header from "../../../components/Header";
+import ConnectButton from "../../../Bank-Component/ConnectButton";
+import Footer from "../../../components/Footer";
+import Balances from "../../../Bank-Component/Balances";
+import { BANK_CONTRACT_ADDRESS , BANK_ABI} from "../../../bank-constant/constants/index.js";
 
 const Board = () => {
   const [walletConnected, setWalletConnected] = useState(false);

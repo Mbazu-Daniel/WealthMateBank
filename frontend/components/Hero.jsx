@@ -1,5 +1,5 @@
-import styles from "../style";
-import { bank, mockups } from "../../public/assets";
+import styles from "../constants/style";
+import { bank, mockups } from "../public/assets";
 import xStyle from "./hero.module.css";
 import Image from "next/image";
 import GetStarted from "./GetStarted";

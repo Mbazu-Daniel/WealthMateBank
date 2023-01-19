@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { logo, bank } from "../../public/assets";
+import { logo, bank } from "../public/assets"
 import { footerLinks, socialMedia } from "../constants";
-import styles from "../style";
+import styles from "../constants/style";
 
 const Footer = () => (
   <section className={`${styles.flexCenter} ${styles.paddingY} flex-col`}>

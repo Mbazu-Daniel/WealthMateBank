@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, {useState} from "react";
-import { close, menu } from "../../public/assets";
+import { close, menu } from "../public/assets";
 import { navLinks } from "../constants/index";
 
 const Menu = () => {
