@@ -6,7 +6,7 @@ import Header from "../../../components/Header";
 import ConnectButton from "../../../Bank-Component/ConnectButton";
 import Footer from "../../../components/Footer";
 import Balances from "../../../Bank-Component/Balances";
-import { BANK_CONTRACT_ADDRESS , BANK_ABI} from "../../../bank-constant/constants/index.js";
+import { BANK_CONTRACT_ADDRESS , BANK_ABI} from "../../../Bank-Constant/constants/index.js";
 
 const Board = () => {
   const [walletConnected, setWalletConnected] = useState(false);
