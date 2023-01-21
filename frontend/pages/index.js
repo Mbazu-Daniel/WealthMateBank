@@ -10,6 +10,7 @@ import styles from "../constants/style"
 
 export default function Home() {
   return (
+    
     <div className="  bg-gray-300 text-primary  dark:text-white dark:bg-primary w-full overflow-hidden">
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
