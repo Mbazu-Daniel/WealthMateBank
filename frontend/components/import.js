@@ -5,6 +5,7 @@ import Services from "./Services";
 import Footer from "./Footer";
 import Menu from "./Menu";
 import Header from "./Header";
+import CTA from "./CTA";
 
 
 export {
@@ -14,5 +15,6 @@ export {
   Services,
  Menu,
  Header,
+ CTA,
   Footer,  
 };

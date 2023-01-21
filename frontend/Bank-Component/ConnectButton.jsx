@@ -5,7 +5,7 @@ const ConnectButton = (props) => {
    <>
     
     {props.walletConnected ? (
-      <div>
+      <div> 
       <button className="text-sm focus:outline-none bg-green-900 rounded-full cursor-pointer p-5">
         Wallet Connected 
       </button>

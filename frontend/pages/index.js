@@ -1,10 +1,4 @@
-import Header from "../components/Header";
-import Menu from "../components/Menu";
-import Hero from "../components/Hero";
-import Product from "../components/Product";
-import Services from "../components/Services";
-import CTA from "../components/CTA";
-import Footer from "../components/Footer";
+import {Services, Footer, Hero, Navbar, Product,Header, CTA, Menu } from "../components/import"
 import styles from "../constants/style"
 
 

@@ -214,6 +214,7 @@ let amount = utils.parseEther(inputValue.transferAmount)
 
 
 <Balances customerTotalBalance={customerTotalBalance}/>
+                
                 <div className="mx-auto">
       <form className="flex flex-wrap">
         {/* DEPOSIT SECTION */}
