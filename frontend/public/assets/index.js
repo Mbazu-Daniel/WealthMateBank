@@ -25,9 +25,8 @@ import people02 from "./people02.png";
 import people03 from "./people03.png";
 import bank from "./bank.png"
 import mockups from "./mockups.png"
-import himark from "./himark.svg"
-import grandida from "./grandida.png"
 import github from "./github.svg"
+import wealthmate from "./wealthmate.png"
 
 export {
   airbnb,
@@ -57,7 +56,6 @@ export {
   people03,
   mockups,
   bank,
-  himark,
-  grandida,
   github,
+  wealthmate
 };

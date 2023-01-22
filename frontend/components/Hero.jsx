@@ -1,5 +1,5 @@
 import styles from "../constants/style";
-import { bank, mockups } from "../public/assets";
+import { bank, mockups,wealthmate } from "../public/assets";
 import xStyle from "./hero.module.css";
 import Image from "next/image";
 import GetStarted from "./GetStarted";
@@ -34,17 +34,17 @@ const Hero = () => {
       </div>
 
       <div className={`flex-1 flex ${styles.flexCenter} md:my-0 my-0 `}>
-        <div
+        {/* <div
           className={`${xStyle.bgIntro} mx-auto order-last md:order-3  overflow-hidden `}
-        >
-          <div className="w-full flex justify-center m-0 p-0">
+        > */}
+          <div className="w-[90%] flex justify-center m-0 p-0">
             <Image
               className="object-cover w-[100%] h-[100%]"
-              src={mockups}
+              src={wealthmate}
               alt="banking"
             />
           </div>
-        </div>
+        {/* </div> */}
 
         <div className={`ss:hidden ${styles.flexCenter}`}>
           <GetStarted />
