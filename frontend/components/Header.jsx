@@ -7,7 +7,7 @@ const Header = ({props}) => {
 
   return (
     <nav className="w-full flex py-6 justify-between items-center navbar ">
-        <Image src={bank} alt="Grandida Bank" className="w-[75px] " />
+        <Image src={bank} alt="WealthMate Bank" className="w-[266px] h-[72px] object-contain " />
 
 {props}
         </nav>
