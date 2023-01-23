@@ -10,6 +10,7 @@ import { BANK_CONTRACT_ADDRESS , BANK_ABI} from "../../../Bank-Constant/constant
 
 const Board = () => {
   const [walletConnected, setWalletConnected] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [customerTotalBalance, setCustomerTotalBalance] = useState(null);
   const [inputValue, setInputValue] = useState({
     withdraw: "",
@@ -59,10 +60,10 @@ const depositTokenHandler = async (event) => {
        
         // We convert the input value to wei
         let txn = await bankContract.depositToken({ value: utils.parseEther(inputValue.deposit),});
-        console.log(`what is this ${customerTotalBalance}`);
-        console.log('Depositing Token...')
+        setLoading(true)
+    
         await txn.wait();
-        console.log('Deposited Token...done', txn.hash)
+        setLoading(false)
         // After transaction is completed we call this function to update the balance of our account
         getCustomerBalances();
     } catch (error) {
@@ -82,10 +83,10 @@ const withdrawTokenHandler = async (event) => {
   let amount = utils.parseEther(inputValue.withdraw)
         // We convert the input value to wei
         let txn = await bankContract.withdrawToken(receiver, amount);
-
-        console.log('Withdrawing Token...')
+        setLoading(true)
         await txn.wait();
-        console.log('Withdraw Token...done', txn.hash)
+        setLoading(false)
+
        
         getCustomerBalances();
     } catch (error) {
@@ -118,9 +119,10 @@ let amount = utils.parseEther(inputValue.transferAmount)
         // We convert the input value to wei
         let txn = await bankContract.transferToken(receiver,amount);
 
-        console.log('Transfering Token...')
+        setLoading(true)
         await txn.wait();
-        console.log('Transfer Token...done', txn.hash)
+        setLoading(false)
+
        
         getCustomerBalances();
     } catch (error) {
@@ -231,6 +233,11 @@ let amount = utils.parseEther(inputValue.transferAmount)
               name="deposit"
               
             />
+            {
+
+loading ? 
+<button className="block w-full rounded-lg shadow-inner bg-primary text-white font-bold py-3 px-4 mt-4"> Depositing... </button> 
+: 
             <button
               id="deposit-btn"
               className="block w-full rounded-lg shadow-inner bg-primary text-white font-bold py-3 px-4 mt-4"
@@ -238,6 +245,8 @@ let amount = utils.parseEther(inputValue.transferAmount)
                    >
               Deposit
             </button>
+
+}
           </div>
         </div>
 
@@ -254,13 +263,14 @@ let amount = utils.parseEther(inputValue.transferAmount)
               value={inputValue.withdraw}
               name="withdraw"
             />
-            <button
+         { loading ?  <button className="block w-full rounded-lg shadow-inner bg-primary text-white font-bold py-3 px-4 mt-4"> Withdrawing... </button> 
+  :    <button
               id="withdraw-btn"
               className="block w-full rounded-lg shadow-inner bg-primary text-white font-bold py-3 px-4 mt-4"
               onClick={withdrawTokenHandler}
             >
               Withdraw
-            </button>
+            </button> }
           </div>
         </div>
 

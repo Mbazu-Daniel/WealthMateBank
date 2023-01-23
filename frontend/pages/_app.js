@@ -7,7 +7,7 @@ export default function App({ Component, pageProps }) {
     <>
         <Head>
       <meta name="author" content="Daniel Mbazu"/>
-      <link rel="shortcut icon" href="/bank.png" />
+      <link rel="wealthmate icon" href="/bank.png" />
       <title>WealthMate</title>
 
     </Head>
