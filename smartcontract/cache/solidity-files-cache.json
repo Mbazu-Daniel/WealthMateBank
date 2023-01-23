@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "C:\\Users\\Daniel Mbazu\\Documents\\Projects\\HiMark\\Grandida\\smartcontract\\contracts\\WealthMate.sol": {
-      "lastModificationDate": 1673262065309,
-      "contentHash": "83aa66c4cfce02d6a800271d89b368ab",
+      "lastModificationDate": 1674459366580,
+      "contentHash": "f52fa4ff90e18ac17909befa3ac7925a",
       "sourceName": "contracts/WealthMate.sol",
       "solcConfig": {
         "version": "0.8.9",
@@ -71,41 +71,6 @@
       ],
       "artifacts": [
         "SafeMath"
-      ]
-    },
-    "C:\\Users\\Daniel Mbazu\\Documents\\Projects\\HiMark\\Grandida\\smartcontract\\contracts\\Staking.sol": {
-      "lastModificationDate": 1673296106106,
-      "contentHash": "c8aad7c18b6b20dbc9e5a2c287dcd5ae",
-      "sourceName": "contracts/Staking.sol",
-      "solcConfig": {
-        "version": "0.8.9",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 1000
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "Staking"
       ]
     }
   }

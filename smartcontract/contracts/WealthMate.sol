@@ -5,7 +5,7 @@ import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 
 /**
 @author Mbazu Ifeanyichukwu Daniel
-@dev Grandida bank
+@dev WealthMate bank
 
 */
 
