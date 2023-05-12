@@ -1,0 +1,60 @@
+name: Deploying to Vercel
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      # Install dependencies
+      - name: Install Dependencies
+        run: yarn install
+        continue-on-error: false
+
+    #   # Run tests
+    #   - name: Run Tests
+    #     run: npm test
+    #     continue-on-error: false
+
+      # Build the app
+      - name: Build
+        if: success() || failure() # Run even if tests fail
+        run: yarn run build
+        continue-on-error: false
+
+      # Deploy to Vercel
+      - name: Deploy to Vercel
+        if: success() && github.ref == 'refs/heads/main' # Only deploy on successful push to main branch
+        uses: amondnet/vercel-action@v20
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: jvCrSsQzBxvOptQnDziZxKL1
+          vercel-project-id: prj_fWlgVNvF7DMBnuHOGswp5nJ1qaR4
+          build-dir: ./build
+          prod: true
+        continue-on-error: false
+
+      # Merge to main branch
+      - name: Merge to Main
+        if: success() && github.event_name == 'push' && github.ref == 'refs/heads/main' # Only merge on successful push to main branch
+        uses: 'stefanzweifel/git-auto-commit-action@v4'
+        with:
+          commit_message: "Merge to main branch"
+          commit_options: '--no-verify --signoff'
+          branch: 'main'
+        #   author_name: ${{ github.actor }}
+        #   author_email: ${{ github.actor }}@users.noreply.github.com
+        env:
+          GITHUB_TOKEN: ${{secrets.TOKEN_GIT}}
+        continue-on-error: false
